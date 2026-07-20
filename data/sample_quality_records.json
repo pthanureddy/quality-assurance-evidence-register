@@ -1,0 +1,276 @@
+{
+  "as_of": "2026-07-20",
+  "projects": [
+    {
+      "id": "SPACE-SW-01",
+      "name": "Synthetic Flight Software Delivery",
+      "product_type": "software",
+      "customer": "Orbital Research Customer",
+      "quality_plan_ref": "QAP-SPACE-SW-01"
+    },
+    {
+      "id": "SPACE-HW-02",
+      "name": "Synthetic Telemetry Unit Delivery",
+      "product_type": "hardware",
+      "customer": "Aerospace Systems Customer",
+      "quality_plan_ref": "QAP-SPACE-HW-02"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "project_id": "SPACE-SW-01",
+      "source": "customer",
+      "reference": "CUS-SW-14",
+      "description": "Release evidence shall identify the tested software baseline.",
+      "verification_method": "review release evidence package",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-002",
+      "project_id": "SPACE-SW-01",
+      "source": "internal QMS",
+      "reference": "QMS-CA-01",
+      "description": "Corrective actions shall record effectiveness evidence before closure.",
+      "verification_method": "sample closed action records",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-003",
+      "project_id": "SPACE-HW-02",
+      "source": "customer",
+      "reference": "CUS-HW-27",
+      "description": "Serialized inspection records shall be traceable to delivered units.",
+      "verification_method": "trace inspection record to serial number",
+      "status": "open"
+    },
+    {
+      "id": "REQ-004",
+      "project_id": "SPACE-HW-02",
+      "source": "internal QMS",
+      "reference": "QMS-AUD-02",
+      "description": "Audit findings shall link to an owned follow-up action.",
+      "verification_method": "review audit finding and action linkage",
+      "status": "verified"
+    }
+  ],
+  "complaints": [
+    {
+      "id": "COMP-001",
+      "project_id": "SPACE-SW-01",
+      "customer_reference": "CUST-2026-041",
+      "opened_on": "2026-06-10",
+      "closed_on": null,
+      "status": "in_progress",
+      "summary": "Release evidence referenced an outdated software baseline.",
+      "severity": "major",
+      "current_8d_stage": "D6",
+      "jira_key": "QA-241",
+      "requirement_ids": ["REQ-001", "REQ-002"]
+    },
+    {
+      "id": "COMP-002",
+      "project_id": "SPACE-HW-02",
+      "customer_reference": "CUST-2026-052",
+      "opened_on": "2026-07-05",
+      "closed_on": null,
+      "status": "open",
+      "summary": "Inspection report could not be traced to one synthetic unit serial.",
+      "severity": "critical",
+      "current_8d_stage": "D3",
+      "jira_key": "QA-255",
+      "requirement_ids": ["REQ-003"]
+    },
+    {
+      "id": "COMP-003",
+      "project_id": "SPACE-SW-01",
+      "customer_reference": "CUST-2026-019",
+      "opened_on": "2026-05-01",
+      "closed_on": "2026-05-16",
+      "status": "closed",
+      "summary": "Document package used inconsistent file naming.",
+      "severity": "minor",
+      "current_8d_stage": "D8",
+      "jira_key": "QA-198",
+      "requirement_ids": ["REQ-002"]
+    }
+  ],
+  "eight_d_records": [
+    {
+      "id": "8D-001",
+      "complaint_id": "COMP-001",
+      "team": "quality engineer, software lead, configuration owner",
+      "problem_statement": "One release package referenced a superseded baseline.",
+      "containment_action": "Hold package release and verify every baseline reference.",
+      "root_cause": "The evidence checklist did not require an automated baseline comparison.",
+      "corrective_action": "Add baseline comparison and independent evidence review.",
+      "validation_evidence": "Two synthetic release packages passed the revised check.",
+      "preventive_action": null,
+      "closure_note": null
+    },
+    {
+      "id": "8D-002",
+      "complaint_id": "COMP-002",
+      "team": "quality engineer, hardware lead, inspection owner",
+      "problem_statement": "One inspection record lacked a serial-number linkage.",
+      "containment_action": "Quarantine the affected synthetic record and verify the batch.",
+      "root_cause": null,
+      "corrective_action": null,
+      "validation_evidence": null,
+      "preventive_action": null,
+      "closure_note": null
+    },
+    {
+      "id": "8D-003",
+      "complaint_id": "COMP-003",
+      "team": "quality engineer and document owner",
+      "problem_statement": "Package files used two naming patterns.",
+      "containment_action": "Rename files and review the complete package.",
+      "root_cause": "The working practice did not define a controlled naming pattern.",
+      "corrective_action": "Publish one naming convention and add a checklist item.",
+      "validation_evidence": "The corrected package passed an independent review.",
+      "preventive_action": "Apply the convention to all active synthetic project folders.",
+      "closure_note": "Customer accepted the corrected package."
+    }
+  ],
+  "corrective_actions": [
+    {
+      "id": "ACT-001",
+      "project_id": "SPACE-SW-01",
+      "complaint_id": "COMP-001",
+      "source_type": "customer complaint",
+      "description": "Add an automated baseline comparison to the release evidence checklist.",
+      "owner": "configuration owner",
+      "due_date": "2026-07-10",
+      "status": "open",
+      "closed_on": null,
+      "verification_evidence": null
+    },
+    {
+      "id": "ACT-002",
+      "project_id": "SPACE-SW-01",
+      "complaint_id": "COMP-001",
+      "source_type": "8D corrective action",
+      "description": "Perform an independent review of the next three evidence packages.",
+      "owner": "software quality lead",
+      "due_date": "2026-07-25",
+      "status": "in_progress",
+      "closed_on": null,
+      "verification_evidence": "Two of three reviews completed"
+    },
+    {
+      "id": "ACT-003",
+      "project_id": "SPACE-HW-02",
+      "complaint_id": "COMP-002",
+      "source_type": "customer complaint",
+      "description": "Reconcile inspection records with the synthetic serial-number register.",
+      "owner": "inspection owner",
+      "due_date": "2026-08-01",
+      "status": "open",
+      "closed_on": null,
+      "verification_evidence": null
+    },
+    {
+      "id": "ACT-004",
+      "project_id": "SPACE-SW-01",
+      "complaint_id": "COMP-003",
+      "source_type": "8D corrective action",
+      "description": "Publish and review the controlled document naming convention.",
+      "owner": "document owner",
+      "due_date": "2026-05-20",
+      "status": "closed",
+      "closed_on": "2026-05-18",
+      "verification_evidence": "Independent package review record REV-018"
+    },
+    {
+      "id": "ACT-005",
+      "project_id": "SPACE-HW-02",
+      "complaint_id": null,
+      "source_type": "internal audit",
+      "description": "Link every audit finding to an owned corrective action.",
+      "owner": "quality system owner",
+      "due_date": "2026-06-01",
+      "status": "closed",
+      "closed_on": "2026-06-05",
+      "verification_evidence": "Audit follow-up sample AUD-FU-02"
+    }
+  ],
+  "risks": [
+    {
+      "id": "RISK-001",
+      "project_id": "SPACE-SW-01",
+      "description": "A mismatched software baseline could enter the customer evidence package.",
+      "likelihood": 4,
+      "impact": 5,
+      "residual_likelihood": 2,
+      "residual_impact": 4,
+      "owner": "configuration owner",
+      "mitigation": "Automated comparison plus independent release review.",
+      "due_date": "2026-07-25",
+      "status": "in_progress"
+    },
+    {
+      "id": "RISK-002",
+      "project_id": "SPACE-HW-02",
+      "description": "Inspection evidence may not retain unit-level traceability.",
+      "likelihood": 3,
+      "impact": 3,
+      "residual_likelihood": 2,
+      "residual_impact": 2,
+      "owner": "inspection owner",
+      "mitigation": "Mandatory serial field and batch reconciliation review.",
+      "due_date": "2026-08-01",
+      "status": "open"
+    },
+    {
+      "id": "RISK-003",
+      "project_id": "SPACE-SW-01",
+      "description": "Inconsistent file names may delay document-package review.",
+      "likelihood": 2,
+      "impact": 2,
+      "residual_likelihood": 1,
+      "residual_impact": 1,
+      "owner": "document owner",
+      "mitigation": "Controlled naming convention and checklist review.",
+      "due_date": "2026-05-20",
+      "status": "closed"
+    }
+  ],
+  "audits": [
+    {
+      "id": "AUD-001",
+      "project_id": "SPACE-HW-02",
+      "audit_type": "internal process audit",
+      "planned_on": "2026-05-15",
+      "completed_on": "2026-05-15",
+      "status": "completed",
+      "scope": "Corrective-action ownership, evidence and closure records",
+      "findings": [
+        {
+          "id": "FIND-001",
+          "severity": "minor",
+          "status": "closed",
+          "description": "One historical finding lacked a named action owner.",
+          "action_id": "ACT-005"
+        },
+        {
+          "id": "FIND-002",
+          "severity": "observation",
+          "status": "open",
+          "description": "Effectiveness evidence should use a consistent reference format.",
+          "action_id": "ACT-002"
+        }
+      ]
+    },
+    {
+      "id": "AUD-002",
+      "project_id": "SPACE-SW-01",
+      "audit_type": "customer audit preparation review",
+      "planned_on": "2026-08-05",
+      "completed_on": null,
+      "status": "planned",
+      "scope": "Software release evidence, requirements traceability and 8D follow-up",
+      "findings": []
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "quality-assurance-evidence-register"
+version = "1.0.0"
+description = "Traceable quality planning, complaint, 8D, risk, audit, and KPI evidence register"
+requires-python = ">=3.12"
+dependencies = [
+  "pydantic>=2.11,<3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.4,<9",
+  "ruff>=0.12,<1",
+]
+
+[project.scripts]
+qa-register = "qa_register.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/qa_register"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
