@@ -249,8 +249,10 @@ def _quality_plan(register: QualityRegister, kpis: Mapping[str, Any]) -> str:
         "",
         f"Evidence date: {register.as_of.isoformat()}",
         "",
-        "This generated summary supports review and planning. It does not assess or certify "
-        "ISO 9001 or AS9100D compliance.",
+        (
+            "This generated summary supports review and planning. It does not assess or certify "
+            "ISO 9001 or AS9100D compliance."
+        ),
         "",
         "## Quality objectives and measurements",
         "",

@@ -4,7 +4,6 @@ from pathlib import Path
 
 from qa_register.exporter import export_register
 
-
 EXPECTED_FILES = {
     "dim_project.csv",
     "dim_date.csv",
