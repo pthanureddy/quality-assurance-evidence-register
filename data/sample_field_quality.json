@@ -1,0 +1,316 @@
+{
+  "data_scope": "synthetic",
+  "source_name": "DeclaredStaticCohortFixture",
+  "as_of": "2026-10-24",
+  "baseline_start": "2026-06-01",
+  "baseline_end": "2026-07-31",
+  "current_start": "2026-08-01",
+  "current_end": "2026-09-30",
+  "currency": "EUR",
+  "assets": [
+    {
+      "id": "A1",
+      "product": "SIM-A",
+      "market": "NORTH",
+      "domains": [
+        "digital",
+        "component"
+      ],
+      "enrolled_on": "2026-01-01"
+    },
+    {
+      "id": "A2",
+      "product": "SIM-A",
+      "market": "NORTH",
+      "domains": [
+        "digital",
+        "component"
+      ],
+      "enrolled_on": "2026-01-01"
+    },
+    {
+      "id": "A3",
+      "product": "SIM-A",
+      "market": "NORTH",
+      "domains": [
+        "digital",
+        "component"
+      ],
+      "enrolled_on": "2026-01-01"
+    },
+    {
+      "id": "A4",
+      "product": "SIM-A",
+      "market": "NORTH",
+      "domains": [
+        "digital",
+        "component"
+      ],
+      "enrolled_on": "2026-01-01"
+    },
+    {
+      "id": "A5",
+      "product": "SIM-A",
+      "market": "WEST",
+      "domains": [
+        "digital",
+        "component"
+      ],
+      "enrolled_on": "2026-01-01"
+    },
+    {
+      "id": "A6",
+      "product": "SIM-A",
+      "market": "WEST",
+      "domains": [
+        "digital",
+        "component"
+      ],
+      "enrolled_on": "2026-01-01"
+    },
+    {
+      "id": "A7",
+      "product": "SIM-A",
+      "market": "WEST",
+      "domains": [
+        "digital"
+      ],
+      "enrolled_on": "2026-01-01"
+    },
+    {
+      "id": "A8",
+      "product": "SIM-A",
+      "market": "WEST",
+      "domains": [
+        "digital"
+      ],
+      "enrolled_on": "2026-01-01"
+    },
+    {
+      "id": "B1",
+      "product": "SIM-B",
+      "market": "NORTH",
+      "domains": [
+        "digital"
+      ],
+      "enrolled_on": "2026-01-01"
+    },
+    {
+      "id": "B2",
+      "product": "SIM-B",
+      "market": "NORTH",
+      "domains": [
+        "digital"
+      ],
+      "enrolled_on": "2026-01-01"
+    },
+    {
+      "id": "B3",
+      "product": "SIM-B",
+      "market": "WEST",
+      "domains": [
+        "digital"
+      ],
+      "enrolled_on": "2026-01-01"
+    },
+    {
+      "id": "B4",
+      "product": "SIM-B",
+      "market": "WEST",
+      "domains": [
+        "digital"
+      ],
+      "enrolled_on": "2026-01-01"
+    }
+  ],
+  "issues": [
+    {
+      "id": "ISS-001",
+      "asset_id": "A1",
+      "domain": "digital",
+      "component": "connectivity",
+      "symptom": "timeout",
+      "occurred_on": "2026-06-05",
+      "reported_on": "2026-06-05",
+      "status": "confirmed",
+      "severity": "major",
+      "evidence_ref": "EVID-001",
+      "part_ref": null,
+      "return_status": "none",
+      "reported_cost_minor": 1000
+    },
+    {
+      "id": "ISS-002",
+      "asset_id": "A4",
+      "domain": "component",
+      "component": "hydraulic-control",
+      "symptom": "deviation",
+      "occurred_on": "2026-06-08",
+      "reported_on": "2026-06-08",
+      "status": "confirmed",
+      "severity": "major",
+      "evidence_ref": "EVID-002",
+      "part_ref": "PART-002",
+      "return_status": "requested",
+      "reported_cost_minor": 1000
+    },
+    {
+      "id": "ISS-003",
+      "asset_id": "A1",
+      "domain": "digital",
+      "component": "connectivity",
+      "symptom": "timeout",
+      "occurred_on": "2026-08-03",
+      "reported_on": "2026-08-03",
+      "status": "confirmed",
+      "severity": "major",
+      "evidence_ref": "EVID-003",
+      "part_ref": null,
+      "return_status": "none",
+      "reported_cost_minor": 1000
+    },
+    {
+      "id": "ISS-004",
+      "asset_id": "A1",
+      "domain": "digital",
+      "component": "connectivity",
+      "symptom": "timeout",
+      "occurred_on": "2026-08-08",
+      "reported_on": "2026-08-08",
+      "status": "confirmed",
+      "severity": "major",
+      "evidence_ref": "EVID-004",
+      "part_ref": null,
+      "return_status": "none",
+      "reported_cost_minor": 1000
+    },
+    {
+      "id": "ISS-005",
+      "asset_id": "A2",
+      "domain": "digital",
+      "component": "connectivity",
+      "symptom": "timeout",
+      "occurred_on": "2026-09-02",
+      "reported_on": "2026-09-02",
+      "status": "confirmed",
+      "severity": "major",
+      "evidence_ref": "EVID-005",
+      "part_ref": null,
+      "return_status": "none",
+      "reported_cost_minor": 1000
+    },
+    {
+      "id": "ISS-006",
+      "asset_id": "A3",
+      "domain": "digital",
+      "component": "connectivity",
+      "symptom": "timeout",
+      "occurred_on": "2026-09-07",
+      "reported_on": "2026-09-07",
+      "status": "pending",
+      "severity": "major",
+      "evidence_ref": "EVID-006",
+      "part_ref": null,
+      "return_status": "none",
+      "reported_cost_minor": 1000
+    },
+    {
+      "id": "ISS-007",
+      "asset_id": "A4",
+      "domain": "component",
+      "component": "hydraulic-control",
+      "symptom": "deviation",
+      "occurred_on": "2026-08-06",
+      "reported_on": "2026-08-06",
+      "status": "confirmed",
+      "severity": "major",
+      "evidence_ref": "EVID-007",
+      "part_ref": "PART-007",
+      "return_status": "requested",
+      "reported_cost_minor": 5000
+    },
+    {
+      "id": "ISS-008",
+      "asset_id": "A2",
+      "domain": "component",
+      "component": "hydraulic-control",
+      "symptom": "deviation",
+      "occurred_on": "2026-09-09",
+      "reported_on": "2026-09-09",
+      "status": "confirmed",
+      "severity": "major",
+      "evidence_ref": "EVID-008",
+      "part_ref": "PART-008",
+      "return_status": "requested",
+      "reported_cost_minor": 6000
+    },
+    {
+      "id": "ISS-009",
+      "asset_id": "B1",
+      "domain": "digital",
+      "component": "connectivity",
+      "symptom": "timeout",
+      "occurred_on": "2026-09-11",
+      "reported_on": "2026-09-11",
+      "status": "pending",
+      "severity": "safety",
+      "evidence_ref": "EVID-009",
+      "part_ref": null,
+      "return_status": "none",
+      "reported_cost_minor": 1000
+    },
+    {
+      "id": "ISS-010",
+      "asset_id": "B2",
+      "domain": "digital",
+      "component": "connectivity",
+      "symptom": "timeout",
+      "occurred_on": "2026-09-12",
+      "reported_on": "2026-09-12",
+      "status": "confirmed",
+      "severity": "minor",
+      "evidence_ref": "EVID-010",
+      "part_ref": null,
+      "return_status": "none",
+      "reported_cost_minor": 1000
+    },
+    {
+      "id": "ISS-011",
+      "asset_id": "A6",
+      "domain": "digital",
+      "component": "connectivity",
+      "symptom": "timeout",
+      "occurred_on": "2026-09-13",
+      "reported_on": "2026-09-13",
+      "status": "rejected",
+      "severity": "major",
+      "evidence_ref": "EVID-011",
+      "part_ref": null,
+      "return_status": "none",
+      "reported_cost_minor": 1000
+    },
+    {
+      "id": "ISS-012",
+      "asset_id": "A8",
+      "domain": "digital",
+      "component": "connectivity",
+      "symptom": "timeout",
+      "occurred_on": "2026-10-21",
+      "reported_on": "2026-10-21",
+      "status": "confirmed",
+      "severity": "major",
+      "evidence_ref": "EVID-012",
+      "part_ref": null,
+      "return_status": "none",
+      "reported_cost_minor": 1000
+    }
+  ],
+  "costs": {
+    "parts_minor": 12000,
+    "logistics_minor": 1500,
+    "labor_minutes": 45,
+    "labor_rate_minor_per_hour": 6000,
+    "contribution_bps": 5000,
+    "assumption_ref": "COST-001"
+  }
+}

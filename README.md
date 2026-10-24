@@ -15,6 +15,30 @@ The repository demonstrates a practical quality workflow; it does not claim ISO 
 
 All included people, organizations, projects, requirements and incidents are synthetic.
 
+## Define and Measure case drafts
+
+The field-quality extension measures a declared synthetic static cohort and
+exports problem/evidence drafts for human review. It distinguishes repeated
+reports from confirmed affected units, computes per-market proportions with
+Wilson95% intervals, compares baseline/current windows, and retains pending,
+rejected and out-of-window evidence. Safety reports are highlighted even when
+unconfirmed; they do not enter confirmed affected-unit counts.
+
+```text
+qa-register field-cases --input data/sample_field_quality.json --output build/field
+```
+
+The bundle contains case JSON, market CSV, a frequency Pareto CSV, unapproved
+cost scenarios and a Markdown review pack. Technical-material checklists do not
+send parts-return requests. Review metadata does not issue Service Bulletins.
+The fixture has12synthetic eligible units,12reports and3draft cases. No Volvo
+product experience, customer data, field deployment, cost saving, company
+commitment approval or official quality-case ownership is claimed.
+
+See [field-case methods and data contracts](docs/FIELD_QUALITY_CASES.md) and
+[executed verification](docs/VERIFICATION.md). Implementation/test/docs drafting
+for this extension used Codex assistance.
+
 ## Quick start
 
 ```text

@@ -18,12 +18,22 @@ jobs:
           cache: pip
       - run: python -m pip install -e ".[dev]"
       - run: ruff check .
-      - run: pytest
+      - run: ruff format --check src/qa_register/field_quality.py tests/test_field_quality.py
+      - run: pytest --cov=qa_register --cov-branch --cov-report=term-missing --cov-report=xml
+      - run: python -m build
       - run: qa-register validate --input data/sample_quality_records.json
       - run: qa-register generate --input data/sample_quality_records.json --output build/powerbi
       - run: test -s build/powerbi/quality_summary.json
       - run: test -s build/powerbi/jira_action_handoff.csv
       - run: test -s build/powerbi/confluence_quality_summary.md
+      - run: qa-register field-cases --input data/sample_field_quality.json --output build/field
+      - run: test -s build/field/market_measurements.csv && test -s build/field/cost_scenarios.csv && test -s build/field/review_pack.md
+      - uses: actions/upload-artifact@v6
+        with:
+          name: quality-case-measurement
+          path: |
+            build/field/
+            coverage.xml
 
   container:
     runs-on: ubuntu-latest
@@ -32,3 +42,4 @@ jobs:
       - uses: actions/checkout@v7
       - run: docker build -t quality-assurance-evidence-register .
       - run: docker run --rm quality-assurance-evidence-register
+      - run: docker run --rm --entrypoint qa-register quality-assurance-evidence-register field-cases --input data/sample_field_quality.json --output /tmp/field
